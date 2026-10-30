@@ -1,0 +1,12 @@
+Logos mit transparentem Hintergrund (Stand 17.10.2026)
+
+aberystwyth.png   Offizielles Logo, aber.ac.uk/en/gmsr/brand/logo (PNG.zip, "Aber Uni logo - FULL COLOUR"), auf 1000 px Breite skaliert
+cambridge.png     Offizielles Logo, cam.ac.uk/brand-resources/logo/download ("full-colour-preferred-logo-transparency"), auf 1000 px Breite skaliert
+dfg.svg           Wikimedia Commons: File:DFG-logo-blau.svg
+sgl-carbon.svg    Wikimedia Commons: File:SGL_Carbon_Logo.svg
+studienstiftung.svg  Wikimedia Commons: File:Studienstiftung_des_deutschen_Volkes_Logo.svg
+tu-dortmund-logo.svg Wikimedia Commons: File:Technische_Universität_Dortmund_Logo.svg
+tum.svg           Wikimedia Commons: File:Logo_of_the_Technical_University_of_Munich.svg (nur Bildmarke, OHNE Schriftzug)
+uni-augsburg-NEUES-LOGO-2026.svg  assets.uni-augsburg.de/static/unia/img/unia_logo.svg (neues Corporate Design seit April 2026, lila)
+topmath.png       von David bereitgestellte Datei, auf den Inhalt zugeschnitten
+tum-mit-schriftzug_aus-alter-datei.png  aus der bisherigen tum.png abgeleitet (weißer Hintergrund in Transparenz umgerechnet), kein offizielles Original – wird in den CV-Seiten verwendet

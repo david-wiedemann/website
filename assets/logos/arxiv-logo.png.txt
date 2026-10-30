@@ -1,0 +1,2 @@
+Place your square arXiv logo file in this folder and name it exactly: arxiv-logo.png
+The website will crop the center and display it as a circle.
