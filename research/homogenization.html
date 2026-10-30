@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Homogenization &amp; multiscale media — research by David Wiedemann." name="description"/>
+<title>Homogenization &amp; multiscale media | David Wiedemann</title>
+<link href="../style.css" rel="stylesheet"/>
+<link href="homogenization.html" hreflang="en" rel="alternate"/><link href="homogenization-de.html" hreflang="de" rel="alternate"/><script src="../assets/js/mathjax-config.js"></script>
+<script defer src="../assets/vendor/mathjax/tex-svg-full.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="../index.html">David Wiedemann</a>
+<nav aria-label="Main navigation" class="nav">
+<div class="nav-dropdown">
+<a class="nav-dropdown-trigger" href="../research.html">Research <span aria-hidden="true" class="nav-chevron">▾</span></a>
+<div aria-label="Research areas" class="nav-dropdown-menu" role="menu">
+<a href="maxwell.html" role="menuitem">Maxwell &amp; wave propagation</a>
+<a href="homogenization.html" role="menuitem">Homogenization &amp; multiscale media</a>
+<a href="variations.html" role="menuitem">Calculus of variations</a>
+</div>
+</div>
+<a href="../publications.html">Publications</a>
+<a href="../teaching.html">Teaching</a>
+<a href="../index.html#contact">Contact</a>
+<a class="nav-cv" href="../cv.html" rel="noopener noreferrer" target="_blank">CV</a>
+<div aria-label="Language" class="lang-switch"><span aria-current="page" class="lang-active">EN</span><a href="homogenization-de.html" hreflang="de" lang="de">DE</a></div></nav>
+</div>
+</header>
+<main>
+<section class="subpage-hero research-main-topic-hero">
+<div class="container research-main-topic-header">
+<div class="breadcrumb">
+<a href="../index.html">Home</a><span>›</span><a href="../research.html">Research</a>
+</div>
+<div class="research-main-topic-intro">
+<h1 class="subpage-title">Homogenization &amp; multiscale media</h1>
+<p class="subpage-lead">Rigorous derivation of macroscopic equations from PDEs posed in complex, periodic, and evolving microscopic geometries.</p>
+</div>
+<aside aria-label="Research topics" class="research-sidebar research-topic-sidebar"><nav aria-label="Research topic navigation" class="research-topic-nav"><a class="research-sidebar-back" href="../research.html">← All research topics</a><span aria-current="page" class="research-current-topic">Homogenization &amp; multiscale media</span><ul class="research-topic-links"><li><a href="topics/evolving-microstructure.html">Evolving Microstructure</a></li><li><a href="topics/pulsating-microstructure.html">Pulsating Microstructure</a></li><li><a href="topics/homogenization-interface-conditions.html">Effective Interface conditions</a></li><li><a href="topics/effective-fluid-flow.html">Effective Fluid flow</a></li><li><a href="topics/effective-diffusion-equations.html">Effective diffusion equations</a></li><li><a href="topics/effective-electromagnetic-transmission.html">Effective electromagnetic transmission conditions</a></li></ul></nav></aside>
+</div>
+</section>
+<section class="section">
+<div class="container research-main-topic-body">
+<div class="research-main">
+<h2>Overview</h2>
+<p>Homogenization studies equations in materials with very fine spatial structures and derives effective macroscopic models that retain the essential influence of those structures. A material with a very small, but positive, characteristic length scale \(\varepsilon\) can be approximated by a homogeneous substitute material: by artificially letting \(\varepsilon\to0\), one derives effective equations for the original medium without resolving each microscopic detail. My research focuses in particular on media with time-evolving geometries and on metamaterials, including effective transport, fluid flow, and electromagnetic properties.</p>
+
+
+<div class="homogenization-example">
+<p>A fundamental example is <strong>periodic homogenization</strong> of a stationary elliptic conductivity problem. The material consists of two components with different conductivities, periodically arranged on the small length scale \(\varepsilon\). Although the physical material has a fixed, small \(\varepsilon>0\), we consider the idealized limit \(\varepsilon\to0\) to obtain a homogeneous substitute material. Its effective conductivity is described by the constant tensor \(A^{\mathrm{hom}}\), which incorporates the influence of the unresolved microscopic phases.</p>
+<div class="homogenization-comparison" aria-label="Microscopic and effective models">
+<div class="homogenization-column homogenization-column-microscopic">
+<figure class="research-figure homogenization-figure homogenization-part-figure">
+<img src="../assets/images/research/homogenization-microscopic.svg" alt="Three periodic microscopic domains with decreasing inclusion spacing" loading="lazy"/>
+<figcaption>Three periodic microscopic geometries with decreasing characteristic scale \(\varepsilon\).</figcaption>
+</figure>
+<section class="homogenization-formula-panel">
+<h3>Microscopic equation</h3>
+<div class="research-equation">\[
+-\nabla\cdot\!\left[a\!\left(\frac{x}{\varepsilon}\right)\nabla u_\varepsilon\right]=f
+\quad\text{in }\Omega,
+\qquad u_\varepsilon=0\quad\text{on }\partial\Omega.
+\]
+<div class="equation-note">\(a(y)\) is \(Y\)-periodic, \(0&lt;\alpha\leq a(y)\leq\beta\), and \(Y=(0,1)^2\).</div>
+</div>
+</section>
+</div>
+<div class="homogenization-column homogenization-column-effective">
+<figure class="research-figure homogenization-figure homogenization-part-figure">
+<img src="../assets/images/research/homogenization-effective.svg" alt="Homogeneous effective domain with the reference cell shown to its right" loading="lazy"/>
+<figcaption>The homogenized material is represented by a constant coefficient tensor \(A^{\mathrm{hom}}\); the periodic reference cell to the right encodes the microscopic information used to compute it.</figcaption>
+</figure>
+<section class="homogenization-formula-panel">
+<h3>Effective equation</h3>
+<div class="research-equation">\[
+-\nabla\cdot(A^{\mathrm{hom}}\nabla u_0)=f\quad\text{in }\Omega,
+\qquad u_0=0\quad\text{on }\partial\Omega.
+\]</div>
+<h3>Effective coefficient</h3>
+<div class="research-equation">\[
+A_{ij}^{\mathrm{hom}}=\frac{1}{|Y|}\int_Y a(y)
+\left(\delta_{ij}+\frac{\partial\chi_j}{\partial y_i}\right)\,\mathrm{d}y,
+\qquad i,j=1,2.
+\]</div>
+<h3>Cell problem</h3>
+<div class="research-equation">\[
+-\nabla_y\cdot\bigl[a(y)(e_j+\nabla_y\chi_j)\bigr]=0
+\quad\text{in }Y,
+\]
+<div class="equation-note">\(\chi_j\) is \(Y\)-periodic, \(\int_Y\chi_j\,\mathrm{d}y=0\), \(j=1,2\).</div>
+</div>
+</section>
+</div>
+</div>
+<p>The <strong>cell correctors</strong> \(\chi_j\) capture how the periodic microstructure distorts a unit macroscopic gradient in direction \(e_j\). Averaging the resulting microscopic flux over one unit cell yields \(A^{\mathrm{hom}}\). In general, this tensor is anisotropic, even when the local conductivity \(a(y)\) is a scalar. This stationary example illustrates the basic mechanism underlying more elaborate homogenization problems, including evolving microstructures, fluid flow, and effective interface conditions.</p>
+</div>
+
+<h2>Publications in this area</h2>
+<div class="publication-list research-publications" data-publication-ids="guezel-2026-dissipation, gahn-2025-reactive-transport, wiedemann-peter-2025-memory, wiedemann-2024-advection, wiedemann-peter-2024-stokes, wiedemann-2023-thesis, wiedemann-peter-2023-colloid, wiedemann-2023-two-scale, wiedemann-peter-2021-darcy"></div>
+<div class="next-research">
+<a href="maxwell.html">← Maxwell equations</a>
+<a href="variations.html">Calculus of variations →</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container footer-inner">
+<span>© 2026 David Wiedemann</span>
+<div class="footer-legal">
+<a href="../imprint.html">Imprint</a>
+<a href="../privacy.html">Privacy</a>
+</div>
+<a href="../index.html">Home</a>
+</div>
+</footer>
+<script src="../data/publications.js"></script><script src="../publications-render.js"></script><script src="../script.js"></script>
+</body>
+</html>

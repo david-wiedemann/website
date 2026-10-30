@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Forschung von David Wiedemann zu Homogenisierung und Mehrskalenproblemen." name="description"/>
+<title>Homogenisierung &amp; Mehrskalenmedien | David Wiedemann</title>
+<link href="../style.css" rel="stylesheet"/>
+<link href="homogenization.html" hreflang="en" rel="alternate"/><link href="homogenization-de.html" hreflang="de" rel="alternate"/><script src="../assets/js/mathjax-config.js"></script>
+<script defer src="../assets/vendor/mathjax/tex-svg-full.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="../index-de.html">David Wiedemann</a>
+<nav aria-label="Hauptnavigation" class="nav">
+<div class="nav-dropdown">
+<a class="nav-dropdown-trigger" href="../research-de.html">Forschung <span aria-hidden="true" class="nav-chevron">▾</span></a>
+<div aria-label="Forschungsgebiete" class="nav-dropdown-menu" role="menu">
+<a href="maxwell-de.html" role="menuitem">Maxwell-Gleichungen &amp; Wellenausbreitung</a>
+<a href="homogenization-de.html" role="menuitem">Homogenisierung &amp; Mehrskalenmedien</a>
+<a href="variations-de.html" role="menuitem">Variationsrechnung</a>
+</div>
+</div>
+<a href="../publications-de.html">Publikationen</a>
+<a href="../teaching-de.html">Lehre</a>
+<a href="../index-de.html#contact">Kontakt</a>
+<a class="nav-cv" href="../cv-de.html" rel="noopener noreferrer" target="_blank">CV</a>
+<div aria-label="Sprache" class="lang-switch"><a href="homogenization.html" hreflang="en" lang="en">EN</a><span aria-current="page" class="lang-active">DE</span></div></nav>
+</div>
+</header>
+<main>
+<section class="subpage-hero research-main-topic-hero">
+<div class="container research-main-topic-header">
+<div class="breadcrumb">
+<a href="../index-de.html">Startseite</a><span>›</span><a href="../research-de.html">Forschung</a>
+</div>
+<div class="research-main-topic-intro">
+<h1 class="subpage-title">Homogenisierung &amp; Mehrskalenmedien</h1>
+<p class="subpage-lead">Rigorose Herleitung makroskopischer Gleichungen aus PDEs in komplexen, periodischen und evolvierenden mikroskopischen Geometrien.</p>
+</div>
+<aside aria-label="Forschungsthemen" class="research-sidebar research-topic-sidebar"><nav aria-label="Forschungsthemen" class="research-topic-nav"><a class="research-sidebar-back" href="../research-de.html">← Alle Forschungsthemen</a><span aria-current="page" class="research-current-topic">Homogenisierung &amp; Mehrskalenmedien</span><ul class="research-topic-links"><li><a href="topics/evolving-microstructure-de.html">Evolvierende Mikrostruktur</a></li><li><a href="topics/pulsating-microstructure-de.html">Pulsierende Mikrostruktur</a></li><li><a href="topics/homogenization-interface-conditions-de.html">Effektive Grenzflächenbedingungen</a></li><li><a href="topics/effective-fluid-flow-de.html">Effektive Fluidströmung</a></li><li><a href="topics/effective-diffusion-equations-de.html">Effektive Diffusionsgleichungen</a></li><li><a href="topics/effective-electromagnetic-transmission-de.html">Effektive elektromagnetische Transmissionsbedingungen</a></li></ul></nav></aside>
+</div>
+</section>
+<section class="section">
+<div class="container research-main-topic-body">
+<div class="research-main">
+<h2>Überblick</h2>
+<p>Die Homogenisierung untersucht Gleichungen in Materialien mit sehr feinen räumlichen Strukturen und leitet makroskopische Modelle her, welche deren wesentlichen Einfluss erfassen. Ein Material mit einer sehr kleinen, aber positiven charakteristischen Längenskala \(\varepsilon\) soll durch ein homogenes Ersatzmaterial beschrieben werden: Dazu betrachtet man künstlich den Grenzübergang \(\varepsilon\to0\) und gewinnt effektive Gleichungen, ohne jedes mikroskopische Detail aufzulösen. Schwerpunkte meiner Forschung sind insbesondere Medien mit zeitlich veränderlicher Geometrie sowie Metamaterialien, unter anderem mit Blick auf effektiven Transport, Fluidströmungen und elektromagnetische Eigenschaften.</p>
+
+
+<div class="homogenization-example">
+<p>Ein grundlegendes Beispiel ist die <strong>periodische Homogenisierung</strong> eines stationären elliptischen Leitfähigkeitsproblems. Das Material besteht aus zwei Komponenten mit unterschiedlichen Leitfähigkeiten, die periodisch auf der kleinen Längenskala \(\varepsilon\) angeordnet sind. Obwohl das reale Material ein festes, kleines \(\varepsilon>0\) besitzt, betrachtet man den idealisierten Grenzübergang \(\varepsilon\to0\), um ein homogenes Ersatzmaterial herzuleiten. Dessen effektive Leitfähigkeit wird durch den konstanten Tensor \(A^{\mathrm{hom}}\) beschrieben, in den der Einfluss der nicht mehr aufgelösten mikroskopischen Phasen eingeht.</p>
+<div class="homogenization-comparison" aria-label="Mikroskopisches und effektives Modell">
+<div class="homogenization-column homogenization-column-microscopic">
+<figure class="research-figure homogenization-figure homogenization-part-figure">
+<img src="../assets/images/research/homogenization-microscopic.svg" alt="Drei periodisch mikrostrukturierte Gebiete mit abnehmender Skalenlänge" loading="lazy"/>
+<figcaption>Die Mikrostruktur wird durch immer feinere periodische Wiederholungen beschrieben (Skalenlänge \(\varepsilon\)).</figcaption>
+</figure>
+<section class="homogenization-formula-panel">
+<h3>Mikroskopische Gleichung</h3>
+<div class="research-equation">\[
+-\nabla\cdot\!\left[a\!\left(\frac{x}{\varepsilon}\right)\nabla u_\varepsilon\right]=f
+\quad\text{in }\Omega,
+\qquad u_\varepsilon=0\quad\text{auf }\partial\Omega.
+\]
+<div class="equation-note">\(a(y)\) ist \(Y\)-periodisch, \(0&lt;\alpha\leq a(y)\leq\beta\) und \(Y=(0,1)^2\).</div>
+</div>
+</section>
+</div>
+<div class="homogenization-column homogenization-column-effective">
+<figure class="research-figure homogenization-figure homogenization-part-figure">
+<img src="../assets/images/research/homogenization-effective.svg" alt="Homogenisiertes Gebiet mit rechts angeordneter periodischer Referenzzelle" loading="lazy"/>
+<figcaption>Der Grenzübergang führt auf ein effektives homogenes Medium mit dem Koeffiziententensor \(A^{\mathrm{hom}}\); die rechts dargestellte Referenzzelle enthält die mikroskopische Information für seine Berechnung.</figcaption>
+</figure>
+<section class="homogenization-formula-panel">
+<h3>Effektive Gleichung</h3>
+<div class="research-equation">\[
+-\nabla\cdot(A^{\mathrm{hom}}\nabla u_0)=f\quad\text{in }\Omega,
+\qquad u_0=0\quad\text{auf }\partial\Omega.
+\]</div>
+<h3>Effektiver Koeffizient</h3>
+<div class="research-equation">\[
+A_{ij}^{\mathrm{hom}}=\frac{1}{|Y|}\int_Y a(y)
+\left(\delta_{ij}+\frac{\partial\chi_j}{\partial y_i}\right)\,\mathrm{d}y,
+\qquad i,j=1,2.
+\]</div>
+<h3>Zellproblem</h3>
+<div class="research-equation">\[
+-\nabla_y\cdot\bigl[a(y)(e_j+\nabla_y\chi_j)\bigr]=0
+\quad\text{in }Y,
+\]
+<div class="equation-note">\(\chi_j\) ist \(Y\)-periodisch, \(\int_Y\chi_j\,\mathrm{d}y=0\), \(j=1,2\).</div>
+</div>
+</section>
+</div>
+</div>
+<p>Die <strong>Zellkorrektoren</strong> \(\chi_j\) beschreiben, wie die periodische Mikrostruktur einen makroskopischen Einheitsgradienten in Richtung \(e_j\) verändert. Durch Mittelung des resultierenden mikroskopischen Flusses über eine Einheitszelle erhält man \(A^{\mathrm{hom}}\). Dieser Tensor kann anisotrop sein, obwohl die lokale Leitfähigkeit \(a(y)\) skalar ist. Das stationäre Beispiel veranschaulicht das Grundprinzip, das auch komplexeren Homogenisierungsproblemen mit evolvierenden Mikrostrukturen, Fluidströmungen und effektiven Interfacebedingungen zugrunde liegt.</p>
+</div>
+
+<h2>Publikationen in diesem Gebiet</h2>
+<div class="publication-list research-publications" data-publication-ids="guezel-2026-dissipation, gahn-2025-reactive-transport, wiedemann-peter-2025-memory, wiedemann-2024-advection, wiedemann-peter-2024-stokes, wiedemann-2023-thesis, wiedemann-peter-2023-colloid, wiedemann-2023-two-scale, wiedemann-peter-2021-darcy"></div>
+<div class="next-research">
+<a href="maxwell-de.html">← Maxwell-Gleichungen</a>
+<a href="variations-de.html">Variationsrechnung →</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container footer-inner">
+<span>© 2026 David Wiedemann</span>
+<div class="footer-legal">
+<a href="../imprint-de.html">Impressum</a>
+<a href="../privacy-de.html">Datenschutz</a>
+</div>
+<a href="../index-de.html">Startseite</a>
+</div>
+</footer>
+<script src="../data/publications.js"></script><script src="../publications-render.js"></script><script src="../script.js"></script>
+</body>
+</html>

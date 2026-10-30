@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Evolvierende Mikrostruktur — Homogenisierung &amp; Mehrskalenmedien — David Wiedemann"/>
+<title>Evolvierende Mikrostruktur | David Wiedemann</title>
+<link rel="stylesheet" href="../../style.css"/>
+<link rel="alternate" hreflang="en" href="evolving-microstructure.html"/>
+<link rel="alternate" hreflang="de" href="evolving-microstructure-de.html"/>
+<script src="../../assets/js/mathjax-config.js"></script>
+<script defer src="../../assets/vendor/mathjax/tex-svg-full.js"></script>
+</head>
+<body class="research-topic-page">
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="../../index-de.html">David Wiedemann</a>
+<nav aria-label="Hauptnavigation" class="nav">
+<div class="nav-dropdown">
+<a class="nav-dropdown-trigger" href="../../research-de.html">Forschung <span aria-hidden="true" class="nav-chevron">▾</span></a>
+<div aria-label="Forschungsgebiete" class="nav-dropdown-menu" role="menu">
+<a href="../maxwell-de.html" role="menuitem">Maxwell-Gleichungen &amp; Wellenausbreitung</a>
+<a href="../homogenization-de.html" role="menuitem">Homogenisierung &amp; Mehrskalenmedien</a>
+<a href="../variations-de.html" role="menuitem">Variationsrechnung</a>
+</div>
+</div>
+<a href="../../publications-de.html">Publikationen</a>
+<a href="../../teaching-de.html">Lehre</a>
+<a href="../../index-de.html#contact">Kontakt</a>
+<a class="nav-cv" href="../../cv-de.html" rel="noopener noreferrer" target="_blank">CV</a>
+<div aria-label="Sprache" class="lang-switch"><a href="evolving-microstructure.html" hreflang="en" lang="en">EN</a><span aria-current="page" class="lang-active">DE</span></div></nav>
+</div>
+</header>
+<main>
+<section class="subpage-hero research-main-topic-hero research-subtopic-hero">
+<div class="container research-main-topic-header research-subtopic-header">
+<div class="breadcrumb"><a href="../../index-de.html">Startseite</a><span>›</span><a href="../../research-de.html">Forschung</a><span>›</span><a href="../homogenization-de.html">Homogenisierung &amp; Mehrskalenmedien</a><span>›</span><span>Evolvierende Mikrostruktur</span></div>
+<div class="research-main-topic-intro">
+<h1 class="subpage-title">Evolvierende Mikrostruktur</h1>
+<p class="subpage-lead">Homogenisierung &amp; Mehrskalenmedien</p>
+</div>
+<aside aria-label="Forschungsthemen" class="research-sidebar research-topic-sidebar"><nav aria-label="Forschungsthemen" class="research-topic-nav"><a class="research-sidebar-back" href="../homogenization-de.html">← Zurück zum Hauptthema</a><a class="research-current-topic" href="../homogenization-de.html">Homogenisierung &amp; Mehrskalenmedien</a><ul class="research-topic-links"><li><a aria-current="page" class="active" href="evolving-microstructure-de.html">Evolvierende Mikrostruktur</a></li><li><a href="pulsating-microstructure-de.html">Pulsierende Mikrostruktur</a></li><li><a href="homogenization-interface-conditions-de.html">Effektive Grenzflächenbedingungen</a></li><li><a href="effective-fluid-flow-de.html">Effektive Fluidströmung</a></li><li><a href="effective-diffusion-equations-de.html">Effektive Diffusionsgleichungen</a></li><li><a href="effective-electromagnetic-transmission-de.html">Effektive elektromagnetische Transmissionsbedingungen</a></li></ul></nav></aside>
+</div></section>
+<section class="section"><div class="container">
+<div class="evolving-page-overview">
+<h2>Überblick</h2>
+<p>Die Geometrie poröser Medien kann sich beispielsweise durch Sedimentations- oder Auflösungsprozesse verändern. Ich untersuche, wie diese Entwicklung die effektiven makroskopischen Gleichungen beeinflusst, insbesondere Porosität, Fluidströmung und Transport. In weiterführenden Modellen ist die Bewegung der Geometrie an die unbekannte Konzentration oder Geschwindigkeit gekoppelt, sodass freie Randwertprobleme entstehen. Mathematisch besteht eine zentrale Schwierigkeit darin, dass die PDEs auf zeitabhängigen Gebieten gestellt sind und nicht lediglich zeitabhängige Koeffizienten auf einem festen Gebiet besitzen.</p>
+</div>
+<section class="evolving-demo" id="evolving-demo" data-lang="de" aria-label="Interaktive Darstellung der zeitlich evolvierenden Mikrostruktur">
+  <header class="evolving-demo-heading">
+    <h3>Schematische Homogenisierung einer evolvierenden Mikrostruktur</h3>
+    <p>Wir interessieren uns für lokale Veränderungen der Mikrostruktur. Beispielsweise kann die Sedimentation von Stoffen, die durch das poröse Medium transportiert werden, eine lokale Wachstumswelle auslösen. Die Animation veranschaulicht diese Entwicklung auf verschiedenen mikroskopischen Skalen und im effektiven Medium.</p>
+  </header>
+  <div class="evolving-controls">
+    <button class="evolving-play" type="button" aria-pressed="false">Start</button>
+    <button class="evolving-reset" type="button">Zurücksetzen</button>
+    <label class="evolving-timeline-label" for="evolving-timeline">Zeit <output class="evolving-clock" for="evolving-timeline">t/T = 0.00</output></label>
+    <input class="evolving-timeline" id="evolving-timeline" type="range" min="0" max="1000" step="1" value="0" aria-label="Zeit t/T" />
+    <label class="evolving-speed-label" for="evolving-speed">Geschwindigkeit</label>
+    <select class="evolving-speed" id="evolving-speed" aria-label="Geschwindigkeit">
+      <option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option>
+    </select>
+  </div>
+  <div class="evolving-visual-layout">
+    <div class="evolving-micro-section">
+      <h4>Mikroskopische Gebiete \(\Omega_\varepsilon(t)\)</h4>
+      <div class="evolving-micro-grid">
+        <div class="evolving-panel"><canvas class="evolving-micro" data-n="4" width="360" height="256" role="img" aria-label="ε = 1/4; 8 × 4 periodische Zellen"></canvas><div class="evolving-scale">ε = 1/4</div></div>
+        <div class="evolving-panel"><canvas class="evolving-micro" data-n="8" width="360" height="256" role="img" aria-label="ε = 1/8; 16 × 8 periodische Zellen"></canvas><div class="evolving-scale">ε = 1/8</div></div>
+        <div class="evolving-panel"><canvas class="evolving-micro" data-n="16" width="360" height="256" role="img" aria-label="ε = 1/16; 32 × 16 periodische Zellen"></canvas><div class="evolving-scale">ε = 1/16</div></div>
+      </div>
+    </div>
+    <div class="evolving-limit-arrow" aria-label="epsilon tends to zero"><span>ε → 0</span><span aria-hidden="true">⟶</span></div>
+    <div class="evolving-macro-section">
+      <div class="evolving-panel"><h4>Effektives Gebiet</h4><canvas class="evolving-macro" width="380" height="256" role="img" aria-label="Makroskopisches Gebiet Omega"></canvas><div class="evolving-scale">Ω</div></div>
+      <svg class="evolving-zoom-lines" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none"><line class="zoom-line zoom-line-top" x1="0" y1="0" x2="0" y2="0"></line><line class="zoom-line zoom-line-bottom" x1="0" y1="0" x2="0" y2="0"></line></svg>
+      <div class="evolving-panel"><h4>Referenzzelle \(Y_x(t)\)</h4><canvas class="evolving-cell" width="240" height="256" role="img" aria-label="Vergrößerte ausgewählte Zelle"></canvas><div class="evolving-scale">\(Y_x(t)\)</div></div>
+    </div>
+  </div>
+  <p class="evolving-caption">Wähle durch Klicken auf eine Mikrostruktur eine lokale Zelle aus. Die Vergrößerung rechts zeigt dieselbe Form zum selben Zeitpunkt. Die Färbung des effektiven Gebiets illustriert die lokale Porosität; sie ist keine berechnete Lösung eines homogenisierten Modells.</p>
+</section>
+<div class="research-subtopic-body">
+<div class="research-main">
+
+<!-- Illustratives mikroskopisches und effektives Modell: wie auf der Homogenisierungsseite. -->
+<h3 class="research-subheading">Illustratives gekoppeltes Transport- und Strömungsmodell</h3>
+<p>
+  Sei \(\Omega_\varepsilon(t)\subset\Omega\) das zeitabhängige Fluidgebiet.
+  Sein innerer Porenrand ist
+  \(\Gamma_\varepsilon(t)=\partial\Omega_\varepsilon(t)\setminus\partial\Omega\),
+  und der auf dem äußeren Rand des Gesamtgebiets liegende Fluidrand ist
+  \(\Sigma_\varepsilon(t)=\partial\Omega_\varepsilon(t)\cap\partial\Omega\).
+  Ein illustratives Modell koppelt Advektion und Diffusion einer Konzentration
+  \(c_\varepsilon\) an die quasistationäre Stokes-Geschwindigkeit
+  \(\mathbf v_\varepsilon\). Mit \(\mathbf n_\varepsilon\)
+  bezeichnen wir die nach außen gerichtete Einheitsnormale des Fluidgebiets.
+</p>
+<div class="homogenization-comparison evolving-model-comparison" aria-label="Illustrative mikroskopische Gleichungen und mögliches homogenisiertes Modell">
+  <div class="homogenization-column homogenization-column-microscopic">
+    <section class="homogenization-formula-panel">
+      <h3>Mikroskopisches Modell in \(\Omega_\varepsilon(t)\)</h3>
+      <div class="research-equation">
+        <div class="evolving-equation-label">Advektions-Diffusionsgleichung mit nichtlinearer Robin-Randbedingung</div>
+        \[
+          \partial_t c_\varepsilon
+          -\nabla\!\cdot(D\nabla c_\varepsilon)
+          +\nabla\!\cdot(c_\varepsilon\mathbf v_\varepsilon)
+          =f_\varepsilon
+          \quad\text{in }\Omega_\varepsilon(t).
+        \]
+        \[
+          -D\nabla c_\varepsilon\cdot\mathbf n_\varepsilon
+          =\varepsilon\,r(c_\varepsilon)
+          \quad\text{auf }\Gamma_\varepsilon(t).
+        \]
+        <div class="equation-note">\(r\) ist eine (möglicherweise nichtlineare und vorzeichenbehaftete) Oberflächenreaktionsrate. Der Faktor \(\varepsilon\) kompensiert die mit feinerer Struktur wachsende Porenoberfläche pro Volumen.</div>
+      </div>
+      <div class="research-equation">
+        <div class="evolving-equation-label">Quasistationäres Stokes-System mit Randbedingungen</div>
+        \[
+        \begin{aligned}
+          -\varepsilon^2\mu\Delta\mathbf v_\varepsilon
+              +\nabla p_\varepsilon &=\mathbf g_\varepsilon,\\
+          \nabla\cdot\mathbf v_\varepsilon&=0
+        \end{aligned}
+        \quad\text{in }\Omega_\varepsilon(t).
+        \]
+        \[
+        \begin{aligned}
+        \mathbf v_\varepsilon
+          &=\mathbf V_{\Gamma,\varepsilon}
+          &&\text{auf }\Gamma_\varepsilon(t),\\
+        \boldsymbol\sigma_\varepsilon\mathbf n_\varepsilon
+          &=\mathbf h_\varepsilon
+          &&\text{auf }\Sigma_\varepsilon(t).
+        \end{aligned}
+        \]
+        <div class="equation-note">No-slip bedeutet, dass die Fluidgeschwindigkeit am inneren Porenrand \(\Gamma_\varepsilon(t)\) gleich der Geschwindigkeit \(\mathbf V_{\Gamma,\varepsilon}\) der bewegten Wand ist; bei einer ruhenden Wand gilt \(\mathbf V_{\Gamma,\varepsilon}=0\). Am äußeren Rand geben \(\mathbf h_\varepsilon\) Neumann-artige Spannungsdaten vor. Dabei ist \(\mu>0\) die Viskosität und \(\boldsymbol\sigma_\varepsilon=\varepsilon^2\mu\nabla\mathbf v_\varepsilon-p_\varepsilon I\) der zum Laplace-Operator passende (im Allgemeinen nichtsymmetrische) Spannungsfluss, nicht der symmetrische physikalische Cauchy-Spannungstensor. Die \(\varepsilon^2\)-Skalierung illustriert einen Darcy-Grenzwert.</div>
+      </div>
+    </section>
+  </div>
+  <div class="homogenization-column homogenization-column-effective">
+    <section class="homogenization-formula-panel">
+      <h3>Mögliches homogenisiertes Modell in \(\Omega\)</h3>
+      <div class="research-equation evolving-effective-concentration">
+        <div class="evolving-equation-label">Effektive Advektions-Reaktions-Diffusionsgleichung für die Konzentration</div>
+        \[
+          \partial_t(\theta c_0)-\nabla\!\cdot(\mathbb D_{\mathrm{eff}}\nabla c_0)+\nabla\!\cdot(c_0\mathbf v_0)=\theta f_0-\mathcal R_{\mathrm{eff}}(c_0).
+        \]
+        <div class="equation-note">\(\theta=\theta(t,x)\) ist die lokale Porosität, \(\mathbb D_{\mathrm{eff}}\) der effektive Diffusionstensor, \(\mathbf v_0\) der makroskopische Volumenstrom (Darcy-Geschwindigkeit) und \(\mathcal R_{\mathrm{eff}}\) die effektive Oberflächenreaktion.</div>
+      </div>
+      <div class="research-equation">
+        <div class="evolving-equation-label">Effektive Darcy-Strömung</div>
+        \[
+          \mathbf v_0=-\mathbb K_{\mathrm{eff}}(\nabla p_0-\mathbf g_0).
+        \]
+        \[
+          \partial_t\theta+\nabla\cdot\mathbf v_0=0.
+        \]
+        <div class="equation-note">In der ersten Gleichung hängt der Permeabilitätstensor \(\mathbb K_{\mathrm{eff}}\) von der veränderlichen Porengeometrie ab. Für inkompressible Strömung mit impermeablen bewegten Porenwänden und ohne Volumenquellen beschreibt die zweite Gleichung die makroskopische Erhaltung des Fluidvolumens: Die Änderung des Porenvolumenanteils \(\theta\) wird durch die Divergenz des gemittelten Volumenstroms \(\mathbf v_0\) ausgeglichen.</div>
+      </div>
+      <div class="research-equation">
+        <div class="evolving-equation-label">Geometrieabhängige Koeffizienten</div>
+        \[
+           \theta(t,x)=\frac{|Y^*(t,x)|}{|Y|},
+           \qquad
+           \mathbb D_{\mathrm{eff}}=\mathbb D_{\mathrm{eff}}(t,x),\qquad
+           \mathbb K_{\mathrm{eff}}=\mathbb K_{\mathrm{eff}}(t,x).
+        \]
+        <div class="equation-note">Dabei bezeichnet \(Y^*(t,x)\) den momentanen Fluidanteil der Referenzzelle \(Y\). Dies sind schematische Beispiele möglicher Grenzterme, kein allgemeiner Homogenisierungssatz für Modelle mit bewegter Grenze. Ihre genaue Gestalt, einschließlich Transport- und Gedächtnistermen, hängt von Skalierungen und Zellproblemen ab.</div>
+      </div>
+    </section>
+  </div>
+</div>
+<p>
+  <strong>Kopplung der Geometrie und freie Grenzen.</strong>
+  In weiterführenden Modellen ist die Porengeometrie nicht vorgegeben.
+  Sedimentation oder Auflösung können durch dieselbe Oberflächenrate
+  \(r(c_\varepsilon)\) wie in der nichtlinearen Robin-Bedingung bestimmt werden.
+  Beispielsweise koppelt das folgende kinetische Gesetz mit \(\kappa>0\)
+  die bewegte Grenze an die Konzentration:
+</p>
+<div class="research-equation evolving-kinetic-law">
+\[
+  \mathbf V_{\Gamma,\varepsilon}\cdot\mathbf n_\varepsilon
+  =-\varepsilon\kappa\,r(c_\varepsilon).
+\]
+</div>
+<p>
+  Dadurch entsteht auf der Mikroskala ein <strong>Freie-Grenzflächen-Problem</strong>,
+  und effektiver Transport, Strömung und Porosität müssen gemeinsam bestimmt
+  werden. Das Vorzeichen der Normalgeschwindigkeit hängt von der Wahl
+  der Normalen und davon ab, ob Stoff angelagert oder abgetragen wird.
+</p>
+
+<h2>Publikationen zu diesem Thema</h2>
+<div class="publication-list research-publications" data-publication-ids="gahn-2025-reactive-transport, wiedemann-peter-2025-memory, wiedemann-peter-2024-stokes, wiedemann-2023-thesis, wiedemann-2023-two-scale, wiedemann-peter-2023-colloid, wiedemann-peter-2021-darcy"></div>
+<p class="topic-back-link"><a href="../homogenization-de.html">← Homogenisierung &amp; Mehrskalenmedien</a></p>
+</div>
+
+</div></div></section>
+</main>
+<footer class="footer">
+<div class="container footer-inner">
+<span>© 2026 David Wiedemann</span>
+<div class="footer-legal">
+<a href="../../imprint-de.html">Impressum</a>
+<a href="../../privacy-de.html">Datenschutz</a>
+</div>
+<a href="../../index-de.html">Startseite</a>
+</div>
+</footer>
+<script src="../../assets/js/evolving-microstructure.js"></script>
+<script src="../../data/publications.js"></script>
+<script src="../../publications-render.js"></script>
+<script src="../../script.js"></script>
+</body>
+</html>

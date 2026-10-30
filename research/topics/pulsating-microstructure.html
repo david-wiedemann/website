@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Pulsating Microstructure — Homogenization &amp; multiscale media — David Wiedemann"/>
+<title>Pulsating Microstructure | David Wiedemann</title>
+<link rel="stylesheet" href="../../style.css"/>
+<link rel="alternate" hreflang="en" href="pulsating-microstructure.html"/>
+<link rel="alternate" hreflang="de" href="pulsating-microstructure-de.html"/>
+<script src="../../assets/js/mathjax-config.js"></script>
+<script defer src="../../assets/vendor/mathjax/tex-svg-full.js"></script>
+</head>
+<body class="research-topic-page">
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="../../index.html">David Wiedemann</a>
+<nav aria-label="Main navigation" class="nav">
+<div class="nav-dropdown">
+<a class="nav-dropdown-trigger" href="../../research.html">Research <span aria-hidden="true" class="nav-chevron">▾</span></a>
+<div aria-label="Research areas" class="nav-dropdown-menu" role="menu">
+<a href="../maxwell.html" role="menuitem">Maxwell &amp; wave propagation</a>
+<a href="../homogenization.html" role="menuitem">Homogenization &amp; multiscale media</a>
+<a href="../variations.html" role="menuitem">Calculus of variations</a>
+</div>
+</div>
+<a href="../../publications.html">Publications</a>
+<a href="../../teaching.html">Teaching</a>
+<a href="../../index.html#contact">Contact</a>
+<a class="nav-cv" href="../../cv.html" rel="noopener noreferrer" target="_blank">CV</a>
+<div aria-label="Language" class="lang-switch"><span aria-current="page" class="lang-active">EN</span><a href="pulsating-microstructure-de.html" hreflang="de" lang="de">DE</a></div></nav>
+</div>
+</header>
+<main>
+<section class="subpage-hero research-main-topic-hero research-subtopic-hero">
+<div class="container research-main-topic-header research-subtopic-header">
+<div class="breadcrumb"><a href="../../index.html">Home</a><span>›</span><a href="../../research.html">Research</a><span>›</span><a href="../homogenization.html">Homogenization &amp; multiscale media</a><span>›</span><span>Pulsating Microstructure</span></div>
+<div class="research-main-topic-intro">
+<h1 class="subpage-title">Pulsating Microstructure</h1>
+<p class="subpage-lead">Homogenization &amp; multiscale media</p>
+</div>
+<aside aria-label="Research topics" class="research-sidebar research-topic-sidebar"><nav aria-label="Research topic navigation" class="research-topic-nav"><a class="research-sidebar-back" href="../homogenization.html">← Back to main topic</a><a class="research-current-topic" href="../homogenization.html">Homogenization &amp; multiscale media</a><ul class="research-topic-links"><li><a href="evolving-microstructure.html">Evolving Microstructure</a></li><li><a aria-current="page" class="active" href="pulsating-microstructure.html">Pulsating Microstructure</a></li><li><a href="homogenization-interface-conditions.html">Effective Interface conditions</a></li><li><a href="effective-fluid-flow.html">Effective Fluid flow</a></li><li><a href="effective-diffusion-equations.html">Effective diffusion equations</a></li><li><a href="effective-electromagnetic-transmission.html">Effective electromagnetic transmission conditions</a></li></ul></nav></aside>
+</div></section>
+<section class="section"><div class="container">
+<div class="evolving-page-overview">
+<h2>Overview</h2>
+<p>Fast oscillations of a microstructure can modify macroscopic transport. In particular, an oscillating geometry may induce an effective advective contribution in a diffusion equation.</p>
+</div>
+<section class="evolving-demo pulsating-demo" id="pulsating-demo" data-lang="en" aria-label="Interactive pulsating microstructured medium with optional slow orientation variation">
+  <header class="evolving-demo-heading">
+    <h3>Pulsating microstructure at three scales</h3>
+    <p>A travelling bending wave deforms the obstacle in each periodic cell. The fast temporal period is exactly the spatial period: \(T_\varepsilon=\varepsilon\).</p>
+  </header>
+  <div class="evolving-controls">
+    <button class="evolving-play pulsating-play" type="button" aria-pressed="false">Play</button>
+    <button class="evolving-reset pulsating-reset" type="button">Reset</button>
+    <label class="evolving-timeline-label" for="pulsating-timeline">Time <output class="evolving-clock pulsating-clock" for="pulsating-timeline">t = 0.00</output></label>
+    <input class="evolving-timeline pulsating-time" id="pulsating-timeline" type="range" min="0" max="1000" value="0" step="1" aria-label="Normalized time" />
+    <label class="evolving-speed-label" for="pulsating-speed">Speed</label>
+    <select class="evolving-speed pulsating-speed" id="pulsating-speed" aria-label="Speed">
+      <option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option>
+    </select>
+    <div class="pulsating-options">
+      <label class="pulsating-check"><input class="pulsating-space" type="checkbox"/><span>Macroscopic spatial variation of direction</span></label>
+      <label class="pulsating-check"><input class="pulsating-slow-time" type="checkbox"/><span>Macroscopic temporal variation of direction</span></label>
+    </div>
+  </div>
+  <div class="evolving-visual-layout">
+    <div class="evolving-micro-section">
+      <h4>Microscopic domains \(\Omega_\varepsilon(t)\)</h4>
+      <div class="evolving-micro-grid">
+        <div class="evolving-panel pulsating-micro-panel"><canvas class="evolving-micro pulsating-micro" data-n="4" width="360" height="256" role="img" aria-label="Interactive periodic microstructure at spatial period ε = 1/4"></canvas><div class="evolving-scale">ε = 1/4</div><div class="pulsating-phase" data-n="4">Period Tε = 0.25</div><div class="pulsating-mini-zoom"><div class="pulsating-mini-label">Zoomed reference cell</div><canvas class="pulsating-micro-cell" data-n="4" width="160" height="160" role="img" aria-label="Magnified cell at epsilon one over 4 with fast oscillations"></canvas><div class="pulsating-mini-phase" data-n="4">Phase = 0.00</div></div><svg class="pulsating-mini-zoom-lines" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none"><line class="zoom-line" x1="0" y1="0" x2="0" y2="0"></line><line class="zoom-line" x1="0" y1="0" x2="0" y2="0"></line></svg></div>
+<div class="evolving-panel pulsating-micro-panel"><canvas class="evolving-micro pulsating-micro" data-n="8" width="360" height="256" role="img" aria-label="Interactive periodic microstructure at spatial period ε = 1/8"></canvas><div class="evolving-scale">ε = 1/8</div><div class="pulsating-phase" data-n="8">Period Tε = 0.125</div><div class="pulsating-mini-zoom"><div class="pulsating-mini-label">Zoomed reference cell</div><canvas class="pulsating-micro-cell" data-n="8" width="160" height="160" role="img" aria-label="Magnified cell at epsilon one over 8 with fast oscillations"></canvas><div class="pulsating-mini-phase" data-n="8">Phase = 0.00</div></div><svg class="pulsating-mini-zoom-lines" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none"><line class="zoom-line" x1="0" y1="0" x2="0" y2="0"></line><line class="zoom-line" x1="0" y1="0" x2="0" y2="0"></line></svg></div>
+<div class="evolving-panel pulsating-micro-panel"><canvas class="evolving-micro pulsating-micro" data-n="16" width="360" height="256" role="img" aria-label="Interactive periodic microstructure at spatial period ε = 1/16"></canvas><div class="evolving-scale">ε = 1/16</div><div class="pulsating-phase" data-n="16">Period Tε = 0.0625</div><div class="pulsating-mini-zoom"><div class="pulsating-mini-label">Zoomed reference cell</div><canvas class="pulsating-micro-cell" data-n="16" width="160" height="160" role="img" aria-label="Magnified cell at epsilon one over 16 with fast oscillations"></canvas><div class="pulsating-mini-phase" data-n="16">Phase = 0.00</div></div><svg class="pulsating-mini-zoom-lines" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none"><line class="zoom-line" x1="0" y1="0" x2="0" y2="0"></line><line class="zoom-line" x1="0" y1="0" x2="0" y2="0"></line></svg></div>
+      </div>
+    </div>
+    <div class="evolving-limit-arrow" aria-label="epsilon tends to zero"><span>ε → 0</span><span aria-hidden="true">⟶</span></div>
+    <div class="evolving-macro-section pulsating-limit-stack">
+      <div class="evolving-panel pulsating-limit-macro">
+        <h4>Effective medium</h4>
+        <canvas class="evolving-macro pulsating-macro" width="380" height="256" role="img" aria-label="Macroscopic domain with selected local reference-cell point"></canvas>
+        <div class="evolving-scale">Ω</div>
+        <div class="pulsating-limit-period" aria-hidden="true">&nbsp;</div>
+      </div>
+      <div class="evolving-panel pulsating-limit-cell">
+        <h4>Reference cell \(Y_x(t,\tau)\)</h4>
+        <canvas class="evolving-cell pulsating-cell" width="240" height="240" role="img" aria-label="Magnified reference cell showing the full fast-cycle swept region, or animated microscopic bending at frozen macroscopic time"></canvas>
+        <div class="pulsating-limit-mode">Fast-cycle swept region</div>
+        <button type="button" class="pulsating-freeze" aria-pressed="false">Freeze macroscopic time · show microscopic motion</button>
+        <p class="pulsating-limit-time" aria-live="polite">All fast phases at fixed macroscopic time</p>
+        <div class="pulsating-selection-note"><span class="pulsating-orientation">θ(x,t) = 0°</span></div>
+      </div>
+      <svg class="evolving-zoom-lines pulsating-zoom-lines" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none"><line class="zoom-line" x1="0" y1="0" x2="0" y2="0"></line><line class="zoom-line" x1="0" y1="0" x2="0" y2="0"></line></svg>
+    </div>
+  </div>
+  <p class="evolving-caption">Click any microscopic domain or the effective domain to select the zoom location. The three magnified cells beneath the microscopic domains show the same location at each ε-scale, making their different oscillation speeds easy to compare. The limit reference cell shows the region swept out over all fast phases at the selected macroscopic position and time. Freeze macroscopic time to animate the local microscopic bending instead. The effective medium is schematic; no homogenized equation or fluid velocity is computed.</p>
+  <p class="evolving-caption">The fast bending cycle uses \(\tau=t/\varepsilon\), while the two optional checkboxes modify a slow rotation \(\theta(x,t)\) of the same obstacle. The drawing period follows \(T_\varepsilon=\varepsilon\) for all three scales.</p>
+</section>
+<div class="research-subtopic-body"><div class="research-main">
+<h2>Publications on this topic</h2>
+<div class="publication-list research-publications" data-publication-ids="wiedemann-2024-advection"></div>
+<p class="topic-back-link"><a href="../homogenization.html">← Homogenization &amp; multiscale media</a></p>
+</div></div>
+</div></section>
+</main>
+<footer class="footer">
+<div class="container footer-inner">
+<span>© 2026 David Wiedemann</span>
+<div class="footer-legal">
+<a href="../../imprint.html">Imprint</a>
+<a href="../../privacy.html">Privacy</a>
+</div>
+<a href="../../index.html">Home</a>
+</div>
+</footer>
+<script src="../../assets/js/pulsating-microstructure.js"></script>
+<script src="../../data/publications.js"></script>
+<script src="../../publications-render.js"></script>
+<script src="../../script.js"></script>
+</body>
+</html>

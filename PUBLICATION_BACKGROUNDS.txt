@@ -1,0 +1,13 @@
+Optional background images for publications.html
+
+Put any or all of these files in the same folder as publications.html:
+
+background-publications.jpg   = All publications
+background-maxwell.jpg        = Maxwell & wave propagation
+background-homogenization.jpg = Homogenization & multiscale media
+background-evolving.jpg       = Evolving microstructure
+background-variations.jpg     = Calculus of variations
+background-neural.jpg         = Neural networks
+
+If one of these files is missing, background.jpg remains visible as the fallback.
+Recommended: landscape images, ideally at least 1600 px wide.
